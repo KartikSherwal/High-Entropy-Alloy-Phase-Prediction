@@ -16,11 +16,8 @@ An exploratory machine learning project to model and predict the crystal phases 
 4. [Machine Learning Methodology](#-machine-learning-methodology)
 5. [Model Benchmark & Results](#-model-benchmark--results)
 6. [Metallurgical Insights & Interpretability](#-metallurgical-insights--interpretability)
-7. [Repository Structure](#-repository-structure)
-8. [Installation & Setup](#-installation--setup)
-9. [Running the Prediction Pipeline](#-running-the-prediction-pipeline)
-10. [Professor / Viva Defense Guide](#-professor--viva-defense-guide)
-11. [References](#-references)
+7. [Running the Prediction Pipeline](#-running-the-prediction-pipeline)
+8. [References](#-references)
 
 ---
 
