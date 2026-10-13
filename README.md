@@ -165,41 +165,9 @@ Top 10 Most Influential Features (Extra Trees):
 
 ---
 
-## 📁 Repository Structure
 
-```
-├── Data Set HEAs_1400.csv       # Original dataset (1,360 HEA samples)
-├── HEA_Phase_Prediction.ipynb   # Master Jupyter Notebook (EDA, ML, Evaluation, Export)
-├── hea_phase_model.joblib       # Serialized Extra Trees model artifact & feature schemas
-├── predict.py                   # Standalone CLI prediction interface
-└── README.md                    # Project documentation & viva guide
-```
 
----
 
-## 🚀 Installation & Setup
-
-### Prerequisites
-* Python 3.10+ (tested on Python 3.12)
-* Windows / Linux / macOS
-
-### 1. Clone or Open the Project
-Navigate to the project root directory:
-```bash
-cd "c:\Users\Lenovo\Desktop\Projects\IIT(BHU)"
-```
-
-### 2. Install Dependencies
-```bash
-pip install pandas numpy scikit-learn xgboost matplotlib seaborn joblib
-```
-
-*(Optional: Install `jupyter` or `ipykernel` if running the notebook interactively)*
-```bash
-pip install notebook ipykernel
-```
-
----
 
 ## 💻 Running the Prediction Pipeline
 
@@ -222,24 +190,6 @@ python predict.py
      * **Preset 4 (Duplex HEA `Al0.5CoCrFeNi`)**: Predicts **`FCC_PLUS_BCC`**
 3. **Batch Prediction from CSV**:
    * Supply the path to an unlabelled CSV file; the tool automatically generates `predictions_output.csv` with class probabilities.
-
----
-
-## 🎓 Professor / Viva Defense Guide
-
-Quick answers to typical examination and viva questions:
-
-### Q1: Why did you choose Extra Trees over Random Forest and XGBoost?
-> *"Random Forest searches for the optimal threshold split for each feature subsample. Extra Trees (Extremely Randomized Trees) draws random split thresholds for candidate features. On tabular metallurgical datasets with correlated physical features ($VEC$, $\Delta H_{\text{mix}}$, elemental fractions), this additional randomization reduces estimator variance and prevents overfitting to noise along experimental phase boundaries."*
-
-### Q2: What does the 5-Fold Cross-Validation bar mean, and why is it next to Test Accuracy?
-> *"5-Fold CV partitions the 1,088 training alloys into 5 subsets, training on 4 and validating on 1 across 5 rounds. The blue bar ($86.9\%$) is the average of these 5 unseen validation scores. Showing it alongside the hold-out test score ($86.0\%$) proves our model didn't just get a lucky test split—the less than $1\%$ gap demonstrates high generalization with zero overfitting."*
-
-### Q3: Why didn't you use Deep Learning / Artificial Neural Networks?
-> *"Tabular materials data with $N = 1,360$ samples are prone to overfitting with deep networks. Decision tree ensembles are inherently invariant to monotonic feature scaling, capture non-linear phase boundaries naturally, and provide direct, auditable feature importance metrics (Gini MDI)."*
-
-### Q4: How did you avoid Data Leakage?
-> *"We strictly isolated our preprocessing: the train-test split was performed prior to any feature scaling. `StandardScaler` was fitted exclusively on `X_train` and only transformed `X_test`. Furthermore, all secondary phase labels (`Microstructure`, `Multiphase`) were dropped from $X$ to prevent target leakage."*
 
 ---
 
