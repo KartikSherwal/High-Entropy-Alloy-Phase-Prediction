@@ -10,14 +10,13 @@ An exploratory machine learning project to model and predict the crystal phases 
 ---
 
 ## 📌 Table of Contents
-1. [Project Overview](#-project-overview)
-2. [Dataset & Target Classes](#-dataset--target-classes)
-3. [Feature Engineering & Preprocessing](#-feature-engineering--preprocessing)
-4. [Machine Learning Methodology](#-machine-learning-methodology)
-5. [Model Benchmark & Results](#-model-benchmark--results)
-6. [Metallurgical Insights & Interpretability](#-metallurgical-insights--interpretability)
-7. [Running the Prediction Pipeline](#-running-the-prediction-pipeline)
-8. [References](#-references)
+ [Project Overview](#-project-overview)
+ [Dataset & Target Classes](#-dataset--target-classes)
+ [Machine Learning Methodology](#-machine-learning-methodology)
+ [Model Benchmark & Results](#-model-benchmark--results)
+ [Metallurgical Insights & Interpretability](#-metallurgical-insights--interpretability)
+ [Running the Prediction Pipeline](#-running-the-prediction-pipeline)
+ [References](#-references)
 
 ---
 
